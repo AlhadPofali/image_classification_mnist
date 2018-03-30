@@ -75,6 +75,6 @@ class DeepModel:
         return self
     
 if __name__ == "__main__":
-    from data_mnist import x_train, y_train, x_test, y_test, batch_size, num_classes, input_shape
+    from data_cifar100 import x_train, y_train, x_test, y_test, batch_size, num_classes, input_shape
     newmodel = DeepModel(x_train, y_train, x_test, y_test, num_classes, input_shape)
     newmodel.cnn().train(128,100).predict()
