@@ -51,9 +51,7 @@ class DeepModel:
         model.add(Flatten())
         model.add(Dense(128, activation='relu'))
         model.add(Dropout(0.3))
-        model.add(Dense(50, activation='relu'))
-        model.add(Dropout(0.1))
-        model.add(Dense(20, activation='relu'))
+        model.add(Dense(64, activation='relu'))
         model.add(Dense(self.num_classes, activation='softmax'))
         # Compile model
         model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
