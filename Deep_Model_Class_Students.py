@@ -47,7 +47,7 @@ class DeepModel:
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Conv2D(15, (3, 3), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2))) 
-        model.add(Dropout(0.5))
+        model.add(Dropout(0.3))
         model.add(Flatten())
         model.add(Dense(128, activation='relu'))
         model.add(Dense(self.num_classes, activation='softmax'))
