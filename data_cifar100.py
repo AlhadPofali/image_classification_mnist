@@ -10,7 +10,7 @@ seed = 7
 np.random.seed(seed)
 
 # Set up dataset specific values
-batch_size = 640
+batch_size = 1000
 num_classes = 100
 
 # input image dimensions

@@ -47,9 +47,9 @@ class DeepModel:
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Conv2D(15, (3, 3), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2))) 
-        model.add(Dropout(0.3))
+        model.add(Dropout(0.4))
         model.add(Flatten())
-        model.add(Dense(64, activation='relu'))
+        model.add(Dense(128, activation='relu'))
         model.add(Dense(self.num_classes, activation='softmax'))
         # Compile model
         model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
@@ -75,4 +75,4 @@ class DeepModel:
 if __name__ == "__main__":
     from data_cifar100 import x_train, y_train, x_test, y_test, batch_size, num_classes, input_shape
     newmodel = DeepModel(x_train, y_train, x_test, y_test, num_classes, input_shape)
-    newmodel.cnn().train(128,150).predict()
+    newmodel.cnn().train(1000,150).predict()
