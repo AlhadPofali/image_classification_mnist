@@ -51,7 +51,15 @@ datagen = ImageDataGenerator(featurewise_center=True, featurewise_std_normalizat
 datagen.fit(X_train)
 # configure batch size
 for X_batch, y_batch in datagen.flow(X_train, y_train, batch_size=9):
+    for i in range(0, 9):
+		pyplot.subplot(330 + 1 + i)
+		pyplot.imshow(X_batch[i].reshape(28, 28), cmap=pyplot.get_cmap('gray'))
+	# show the plot
+	pyplot.show()
+	break
 
+    
+    
 print('x_train shape:', x_train.shape)
 print(x_train.shape[0], 'train samples')
 print(x_test.shape[0], 'test samples')
