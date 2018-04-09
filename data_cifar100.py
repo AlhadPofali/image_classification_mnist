@@ -5,6 +5,7 @@ from pprint import pprint
 
 from keras import backend as K
 K.set_image_dim_ordering('tf')
+from keras.preprocessing.image import ImageDataGenerator
 
 seed = 7
 np.random.seed(seed)
