@@ -45,6 +45,13 @@ x_test = x_test.astype('float32')
 x_train /= 255
 x_test /= 255
 
+# define data preparation
+datagen = ImageDataGenerator(featurewise_center=True, featurewise_std_normalization=True)
+# fit parameters from data
+datagen.fit(X_train)
+# configure batch size
+for X_batch, y_batch in datagen.flow(X_train, y_train, batch_size=9):
+
 print('x_train shape:', x_train.shape)
 print(x_train.shape[0], 'train samples')
 print(x_test.shape[0], 'test samples')
