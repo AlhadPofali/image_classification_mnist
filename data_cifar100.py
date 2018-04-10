@@ -49,9 +49,9 @@ x_test /= 255
 # define data preparation
 datagen = ImageDataGenerator(featurewise_center=True, featurewise_std_normalization=True)
 # fit parameters from data
-datagen.fit(X_train)
+datagen.fit(x_train)
 # configure batch size
-for X_batch, y_batch in datagen.flow(X_train, y_train, batch_size=9):
+for x_batch, y_batch in datagen.flow(x_train, y_train, batch_size=9):
     break
     
 print('x_train shape:', x_train.shape)
