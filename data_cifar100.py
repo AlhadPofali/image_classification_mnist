@@ -55,6 +55,7 @@ datagen.fit(x_train)
 # configure batch size
 for x_batch, y_batch in datagen.flow(x_train, y_train, batch_size=9):
     break
+   
     
 print('x_train shape:', x_train.shape)
 print(x_train.shape[0], 'train samples')
