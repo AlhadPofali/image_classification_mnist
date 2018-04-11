@@ -48,7 +48,7 @@ x_test /= 255
 
 # define data preparation
 #datagen = ImageDataGenerator(featurewise_center=True, featurewise_std_normalization=True)
-shift = 0.2
+shift = 0.3
 datagen = ImageDataGenerator(width_shift_range=shift, height_shift_range=shift)
 # fit parameters from data
 datagen.fit(x_train)
