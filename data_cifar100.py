@@ -6,6 +6,8 @@ from pprint import pprint
 from keras import backend as K
 K.set_image_dim_ordering('tf')
 from keras.preprocessing.image import ImageDataGenerator
+from skimage import data, img_as_float
+from skimage import exposure
 
 seed = 7
 np.random.seed(seed)
