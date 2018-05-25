@@ -44,9 +44,9 @@ class DeepModel:
     def cnn(self):
     # create model
         model = Sequential()
-        model.add(Conv2D(50, (5, 5), input_shape=self.input_shape, activation='relu'))
+        model.add(Conv2D(20, (5, 5), input_shape=self.input_shape, activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
-        model.add(Conv2D(25, (3, 3), activation='relu'))
+        model.add(Conv2D(10, (3, 3), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2))) 
         #model.add(Dropout(0.2))
         model.add(Flatten())
@@ -76,4 +76,4 @@ class DeepModel:
 if __name__ == "__main__":
     from data_cifar100 import x_train, y_train, x_test, y_test, batch_size, num_classes, input_shape
     newmodel = DeepModel(x_train, y_train, x_test, y_test, num_classes, input_shape)
-    newmodel.cnn().train(1000,150).predict()
+    newmodel.cnn().train(2000,300).predict()
